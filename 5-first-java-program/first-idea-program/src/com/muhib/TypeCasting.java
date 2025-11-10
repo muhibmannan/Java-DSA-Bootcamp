@@ -13,10 +13,35 @@ public class TypeCasting {
 //        System.out.println(num);
 
         // automatic type promotion in expressions
-        byte a = 50;
-        byte b = 40;
-        byte c = (byte) (a * b);
-        System.out.println(c);
+
+//        int a = 257;
+//        byte b = (byte) a;
+
+//        byte a = 50;
+//        byte b = 40;
+//        byte c = 100;
+//        int d = a * b / c;
+//        System.out.println(d);
+
+//        byte b = 50;
+//        b = b * 2;
+
+//        int number = 'A';
+//        System.out.println(number);
+
+
+        byte b = 65;
+        char c = 'a';
+        short s = 1541;
+        int i = 65465;
+        float f = 654.65f;
+        double d = 0.216454;
+
+        double result = (f * b) + (i / c) - (d * s);
+
+        System.out.println((f * b) +" "+ (i / c) +" "+ (d * s));
+        System.out.println(result);
+
 
 
     }
