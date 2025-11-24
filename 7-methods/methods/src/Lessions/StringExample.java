@@ -1,3 +1,5 @@
+package Lessions;
+
 import java.util.Scanner;
 
 public class StringExample {

@@ -1,3 +1,5 @@
+package Lessions;
+
 public class Scope {
     public static void main(String[] args0) {
         int a = 10;
@@ -34,7 +36,7 @@ public class Scope {
     }
 
     static void random(int marks) {
-        int num  = 546;
+        int num = 546;
         System.out.println(num);
         System.out.println(marks);
     }

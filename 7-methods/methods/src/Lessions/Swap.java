@@ -1,3 +1,5 @@
+package Lessions;
+
 public class Swap {
     public static void main(String[] args) {
 
@@ -5,7 +7,7 @@ public class Swap {
         int b = 20;
 
         /*
-        == Swap numbers code ==
+        == Lessions.Swap numbers code ==
         int temp = a;
         a = b;
         b = temp;

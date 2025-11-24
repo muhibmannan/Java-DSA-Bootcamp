@@ -1,3 +1,5 @@
+package Lessions;
+
 public class Greeting {
     public static void main(String[] args) {
         String message = greet();
