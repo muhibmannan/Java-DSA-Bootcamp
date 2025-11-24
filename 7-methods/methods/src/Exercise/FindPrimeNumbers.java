@@ -28,6 +28,12 @@ public class FindPrimeNumbers {
                 return false;
             }
             c++;
-        } return c * c > n;
+        }
+        if (c * c > n) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
