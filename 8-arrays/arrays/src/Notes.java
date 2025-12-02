@@ -7,17 +7,17 @@ public class Notes {
 
 
 
-        //      == PHASE 1: The Basics & Input ==
+        //          == PHASE 1: The Basics & Input ==
 
         // Setting up the Scanner
         Scanner in = new Scanner(System.in); // Creating scanner object
 
-        // 1D Array Declaration
+        //  1D Array Declaration
 
-        // Syntax A: Definition with size (Empty)
+        //  Syntax A: Definition with size (Empty)
         int[] arr = new int[5]; // Creates a box of 5 slots. All are 0 by default.
 
-        // Syntax B: Definition with values (Populated)
+        //  Syntax B: Definition with values (Populated)
         int[] nums = {1, 2, 3, 4}; // Creates size 4 and fills it immediately.
 
         /*
@@ -27,14 +27,16 @@ public class Notes {
 
 
 
-        //      == PHASE 2: Iteration (Looping) ==
+        //          == PHASE 2: Iteration (Looping) ==
 
-        // 1. The Standard for Loop
+        //  INPUT
+        //  1. The Standard for Loop
         for (int i = 0; i < arr.length; i++) {
             arr[i] = in.nextInt(); // We need 'i' to tell the computer WHERE to put the data
         }
 
-        // 2. The Enhanced for Loop (For-Each)
+        //  OUTPUT
+        //  2. The Enhanced for Loop (For-Each)
         for (int num: arr) {
             System.out.print(num + " ");
         }
