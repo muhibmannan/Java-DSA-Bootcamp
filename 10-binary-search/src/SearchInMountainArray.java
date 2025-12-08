@@ -2,60 +2,58 @@
 
 public class SearchInMountainArray {
     public static void main(String[] args) {
-        int[] arr = {0,2,5,10,5,2};
+        int[] mountainArr = {1, 2, 3, 4, 5, 3, 1};
+        int target = 6;
 
-        System.out.println(peakIndexInMountainArray(arr));
+        System.out.println(search(mountainArr, target));
     }
 
-    int search(int[] arr, int target) {
-        int peak = peakIndexInMountainArray(arr);
-        int firstTry = orderAgnosticBinarySearch(arr, target, 0, peak);
+    static int search(int[] mountainArr, int target) {
+        int peak = peakIndexInMountainArray(mountainArr);
+
+        int firstTry = orderAgnosticBS(mountainArr, target, 0, peak);
         if (firstTry != 0) {
             return firstTry;
-        }
-        return orderAgnosticBinarySearch(arr, target, peak + 1, arr.length - 1);
+        } return orderAgnosticBS(mountainArr, target, peak + 1, mountainArr.length - 1);
     }
-    static int peakIndexInMountainArray(int[] arr) {
-        int start = 0;
-        int end = arr.length - 1;
 
-        while(start < end) {
+    static int peakIndexInMountainArray(int[] mountainArr) {
+        int start = 0;
+        int end = mountainArr.length - 1;
+
+        while (start < end) {
             int mid = start + (end - start) / 2;
-            if(arr[mid] > arr[mid + 1]) {
+
+            if (mountainArr[mid] > mountainArr[mid + 1]) {
                 end = mid;
             } else {
                 start = mid + 1;
             }
-        }
-        return start;
+        } return start;
     }
 
-    static int orderAgnosticBinarySearch (int[] arr, int target, int start, int end) {
-
-        //  Find whether array is sorted in ascending or descending
-        boolean isAsc = arr[start] < arr[end];
+    static int orderAgnosticBS(int[] mountainArr, int target, int start, int end) {
+        boolean isAsc = mountainArr[start] < mountainArr[end];
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (arr[mid] == target) {
+            if (mountainArr[mid] == target) {
                 return mid;
             }
-
             if (isAsc) {
-                if (target < arr[mid]) {
+                if (target < mountainArr[mid]) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
                 }
             } else {
-                if (target > arr[mid]) {
-                    end = mid - 1;
-                } else {
+                if (target < mountainArr[mid]) {
                     start = mid + 1;
+                } else {
+                    end = mid - 1;
                 }
             }
-        }
-        return -1;
+        } return -1;
     }
 }

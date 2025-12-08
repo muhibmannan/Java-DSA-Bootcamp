@@ -6,7 +6,6 @@ public class NextGreatestCharacter {
         char target = 'z';
 
         System.out.println(nextGreatestCharacter(letters, target));
-
     }
 
     static char nextGreatestCharacter(char[] letters, char target) {
