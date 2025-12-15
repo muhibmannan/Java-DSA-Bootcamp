@@ -7,7 +7,7 @@ public class CeilingOfNumber {
         System.out.println(ans);
     }
 
-    static  int ceilingOfNumber(int[] arr, int target) {
+    static int ceilingOfNumber(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 

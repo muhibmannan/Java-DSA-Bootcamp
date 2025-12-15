@@ -14,7 +14,8 @@ public class SearchInMountainArray {
         int firstTry = orderAgnosticBS(mountainArr, target, 0, peak);
         if (firstTry != 0) {
             return firstTry;
-        } return orderAgnosticBS(mountainArr, target, peak + 1, mountainArr.length - 1);
+        }
+        return orderAgnosticBS(mountainArr, target, peak + 1, mountainArr.length - 1);
     }
 
     static int peakIndexInMountainArray(int[] mountainArr) {
@@ -29,7 +30,8 @@ public class SearchInMountainArray {
             } else {
                 start = mid + 1;
             }
-        } return start;
+        }
+        return start;
     }
 
     static int orderAgnosticBS(int[] mountainArr, int target, int start, int end) {
@@ -54,6 +56,7 @@ public class SearchInMountainArray {
                     end = mid - 1;
                 }
             }
-        } return -1;
+        }
+        return -1;
     }
 }

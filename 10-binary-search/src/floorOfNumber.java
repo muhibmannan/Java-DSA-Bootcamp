@@ -7,7 +7,7 @@ public class floorOfNumber {
         System.out.println(ans);
     }
 
-    static  int floorOfNumber(int[] arr, int target) {
+    static int floorOfNumber(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 

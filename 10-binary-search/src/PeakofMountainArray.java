@@ -2,7 +2,7 @@
 
 public class PeakofMountainArray {
     public static void main(String[] args) {
-        int[] arr = {0,2,5,10,5,2};
+        int[] arr = {0, 2, 5, 10, 5, 2};
 
         System.out.println(peakIndexInMountainArray(arr));
     }
@@ -11,9 +11,9 @@ public class PeakofMountainArray {
         int start = 0;
         int end = arr.length - 1;
 
-        while(start < end) {
+        while (start < end) {
             int mid = start + (end - start) / 2;
-            if(arr[mid] > arr[mid + 1]) {
+            if (arr[mid] > arr[mid + 1]) {
                 end = mid;
             } else {
                 start = mid + 1;
